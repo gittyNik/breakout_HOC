@@ -1,7 +1,7 @@
 // Promises
 
-const promiseFunction = function(value) {
-	return new Promise(function(resolve, reject) {
+const promiseFunction = function (value) {
+	return new Promise(function (resolve, reject) {
 		if (value === "resolve") {
 			return resolve("Inside Resolve block");
 		} else {
@@ -12,21 +12,14 @@ const promiseFunction = function(value) {
 
 // promise chaining
 
-promiseFunction("resolve")
-	.then(data => {
-		return data;
+
+
+promiseFunction("resolvefgfh")
+	.then(function (data) {
+		console.log(`!!!!!!!!`, data);
 	})
-	.then(dt => {
-		return {
-			data: dt,
-			resolve: true
-		};
-	})
-	.then(dta => {
-		console.log(dta);
-	})
-	.catch(err => {
-		console.log(err);
+	.catch(function(err) {
+		console.log(`+++++++++`, err);
 	});
 
 // promiseFunction("did not resolve")
